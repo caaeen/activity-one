@@ -13,8 +13,8 @@ function Hero(){
                     <h2>Graphic Designer & fullstack developer</h2><br />
                     <p>By blending creativity with clear coding, I craft simple, user-friendly solutions that help brands make a strong impression.</p>
                     <div className="button-box">
-                        <button>About Me</button>
-                        <button>Open Cv</button>
+                        <Buttons btnName="About Me"/>
+                        <Buttons btnName="Open Cv"/>
                     </div>
                 </div>
 
