@@ -1,13 +1,19 @@
 import { useState } from "react";
 
+const Buttons = ({ btnName, onClick }) => {
+  const [getBtnName, setBtnName] = useState(btnName);
 
-const Buttons = (props) => {
-    const [getBtnName, setBtnName] = useState(props.btnName)
-    return(
-        <>
-            <button onClick={()=>setBtnName("Opening...")}>{getBtnName}</button>
-        </>
-    )
-}
+  const handleClick = () => {
+    
+    if(btnName != "About Me"){
+      setBtnName("Opening...");
+    }
+    if (onClick) {
+      onClick(); 
+    }
+  };
 
-export default Buttons
+  return <button onClick={handleClick}>{getBtnName}</button>;
+};
+
+export default Buttons;

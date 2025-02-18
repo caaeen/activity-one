@@ -1,6 +1,9 @@
 import logo from '../../assets/images/pic-logo.png'
-
-function Upper(){
+import { useRef } from "react";
+function Upper({ aboutRef }){
+    const scrollToAbout = () => {
+        aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+      };
     return(
         <>
             <div className="header-container">
@@ -9,7 +12,7 @@ function Upper(){
                     <h3>Portfolio</h3>
                 </div>
                 <div className="nav-link">
-                    <a href="">About Me</a>
+                    <a style={{cursor:"pointer"}} onClick={scrollToAbout}>About Me</a>
                     <a href="">Projects</a>
                     <a href="">CV</a>
                     

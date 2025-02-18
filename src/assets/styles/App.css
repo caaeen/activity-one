@@ -159,4 +159,31 @@
   .left-container img{
     width: 300px;
   }
+
+  /*About Me*/
+
+  .about-parent-container{
+
+  }
+  .middle-container{
+
+  }
+  .a-left-container{
+
+
+  }
+  .a-right-container{
+    position: absolute;
+  }
+  .a-right-container img{
+    display: none;
+    
+
+  }
+  .a-info-box{
+
+  }
+  .a-info-box button{
+ 
+  }
 }

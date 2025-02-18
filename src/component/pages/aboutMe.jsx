@@ -1,9 +1,10 @@
 import brain from '../../assets/images/brain.png'
 import Buttons from "../design-component/button.jsx"
+
 function AboutMe(){
     return(
         <>
-            <div className="about-parent-container">
+            <div className="about-parent-container" >
                 <div className="middle-container">
                     <div className="a-left-container">
                         <h1>About Me</h1>
