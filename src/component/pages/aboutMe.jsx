@@ -1,10 +1,11 @@
-import brain from '../../assets/images/brain.png'
-import Buttons from "../design-component/button.jsx"
+import brain from '../../assets/images/brain.png';
+import darkbrain from '../../assets/images/darkbrain.png';
+import Buttons from "../design-component/button.jsx";
 
-function AboutMe(){
-    return(
+function AboutMe({ isDarkMode }) {
+    return (
         <>
-            <div className="about-parent-container" >
+            <div className={`about-parent-container ${isDarkMode ? 'darkmode' : 'bluemode'}`}>
                 <div className="middle-container">
                     <div className="a-left-container">
                         <h1>About Me</h1>
@@ -15,21 +16,19 @@ function AboutMe(){
                                 engaging in creative endeavors. I am 
                                 currently an undergraduate of Information 
                                 Technology and my technical expertise 
-                                and artistic skills enables me to 
+                                and artistic skills enable me to 
                                 deliver unique and impactful solutions.
                             </p>
-                            <Buttons btnName="Open CV"/>
+                            <Buttons btnName="Open CV" />
                         </div>
                     </div>
                     <div className="a-right-container">
-                        <img src={brain} alt="" />
+                        <img src={isDarkMode ? darkbrain : brain} alt="Brain Illustration" />
                     </div>
                 </div>
             </div>
-
         </>
-    )
+    );
 }
 
-
-export default AboutMe
+export default AboutMe;
