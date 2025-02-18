@@ -1,4 +1,4 @@
-import logo from './assets/pic-logo.png'
+import logo from '../../assets/images/pic-logo.png'
 
 function Upper(){
     return(
