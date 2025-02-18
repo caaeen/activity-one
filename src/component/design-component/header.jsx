@@ -1,28 +1,32 @@
-import logo from '../../assets/images/pic-logo.png'
-import { useRef } from "react";
-function Upper({ aboutRef }){
+import logo from '../../assets/images/pic-logo.png';
+
+function Upper({ aboutRef, darkmode, isDarkMode }) {
     const scrollToAbout = () => {
         aboutRef.current?.scrollIntoView({ behavior: "smooth" });
-      };
-    return(
+    };
+
+    return (
         <>
-            <div className="header-container">
-                <div className="pic-logo">
-                    <img src={logo} alt="" />
-                    <h3>Portfolio</h3>
-                </div>
-                <div className="nav-link">
-                    <a style={{cursor:"pointer"}} onClick={scrollToAbout}>About Me</a>
-                    <a href="">Projects</a>
-                    <a href="">CV</a>
-                    
-                </div>
-                <div className="contact-box">
-                    <a href="">Contact</a>
+            <div className="fixed-header">
+                <div className={`header-container ${isDarkMode ? 'blackmode' : 'lightmode'}`}>
+                    <div className="pic-logo">
+                        <img src={logo} alt="" />
+                        <h3>Portfolio</h3>
+                    </div>
+                    <div className="nav-link">
+                        <a style={{ cursor: "pointer" }} onClick={scrollToAbout}>About Me</a>
+                        <p style={{ cursor: "pointer" }} >Projects</p>
+                        <p style={{ cursor: "pointer" }} >Contact</p>
+                    </div>
+                    <div className="contact-box">
+                        <span style={{cursor:"pointer"}} onClick={darkmode} className="toggle-dark-mode">
+                            {isDarkMode ? "Light Mode" : "Dark Mode"}
+                        </span>
+                    </div>
                 </div>
             </div>
         </>
-    )
+    );
 }
 
-export default Upper
+export default Upper;
