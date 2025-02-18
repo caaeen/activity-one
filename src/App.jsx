@@ -1,17 +1,20 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Upper from './header.jsx'
-import Hero from './hero.jsx'
+import { useRef } from "react";
+import './assets/styles/App.css'
+import Upper from './component/design-component/header.jsx'
+import Hero from './component/pages/hero.jsx'
+import AboutMe from './component/pages/aboutMe.jsx'
 function App() {
-
+  const aboutRef = useRef(null);
 
   return (
     <>
       <div className="parent-class">
-        <Upper />
-        <Hero />
+        <Upper aboutRef={aboutRef}/>
+        <Hero aboutRef={aboutRef}/>
+        <div ref={aboutRef}>
+          <AboutMe />
+        </div>
       </div>
     </>
   )
