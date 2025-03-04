@@ -159,7 +159,7 @@
 
 /* Light Mode (Default) */
 .lightmode {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.5);
   color: black;
 }
 .bluemode{
@@ -180,9 +180,10 @@
 
 /* Dark Mode */
 .darkmode {
-  background-color: #121212;
+  background-color: rgba(18, 18, 18, 0.5); 
   color: white;
 }
+
 
 .darkmode .header-container h3,
 .darkmode .header-container a,
@@ -424,8 +425,13 @@ button {
 
 
   .lightmode {
-    background-color: white;
+    background: rgba(255, 255, 255, 0.5);
     color: black;
+  }
+  .side-parent-container{
+    background-color: white;
+
+    
   }
   .bluemode{
     background-color: var(--bg-color);
